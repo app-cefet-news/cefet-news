@@ -1,0 +1,3 @@
+- [ ] Config express endpoints
+- [ ] User CRUD basic
+- [ ] Login/Sign Up Module

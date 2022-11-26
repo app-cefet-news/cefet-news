@@ -1,27 +1,25 @@
 const express = require('express')
-
-const { PrismaClient, Prisma } = require('@prisma/client')
+const bodyParser = require('body-parser')
+// #####
+const adminRoutes = require('./routes/admin.js')
+const commonRoutes = require('./routes/common.js')
+// #####
 
 const server = express()
 
 const port = 4000
 
-const prisma = new PrismaClient({
-  log: ['query'],
-})
+// server.use(bodyParser.urlencoded({ extended: false }))
+server.use(bodyParser.json())
 
+server.use('/admin', adminRoutes)
+server.use(commonRoutes)
 
+// 404 Page
+server.use((req, res) => {
 
-server.use('/users', async (req, res, next) => {
+  res.status(404).send({ message: "Route not found" })
 
-  const users = await prisma.user.findMany()
-
-  res.send({ data: users })
-})
-
-server.use('/', (req, res, next) => {
-
-  res.send({ message: "Working!" })
 })
 
 server.listen(port, () => console.log(`Server running on port ${port}`))
