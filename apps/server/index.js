@@ -12,13 +12,13 @@ const port = 4000
 // server.use(bodyParser.urlencoded({ extended: false }))
 server.use(bodyParser.json())
 
-server.use('/admin', adminRoutes)
-server.use(commonRoutes)
+server.use('/admin', adminRoutes) // Path filter
+server.use(commonRoutes) // Path filter
 
 // 404 Page
 server.use((req, res) => {
 
-  res.status(404).send({ message: "Route not found" })
+  res.status(404).json({ message: "Route not found" })
 
 })
 

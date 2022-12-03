@@ -2,6 +2,8 @@ const express = require('express')
 
 const { PrismaClient } = require('@prisma/client')
 
+const rootDir = require('../util/path')
+
 const prisma = new PrismaClient({
   log: ['query'],
 })
@@ -20,12 +22,13 @@ Router.post('/users', async (req, res) => { // CREATE USER
     }
   })
 
-  res.status(200).send({ data: users })
+  res.status(200).json({ data: users })
 })
 
 Router.get('/', (req, res) => {
 
-  res.status(200).send({ message: "Welcome!" })
+  // res.status(200).send({ message: rootDir })
+  res.status(200).json({ message: "Welcome!" })
 
 })
 
