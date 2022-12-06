@@ -5,10 +5,13 @@
   '/users'
   ```
 
-  * Create = POST
-  * Read = GET
-  * Update = PUT
-  * Delete = DELETE
+  ### Create - POST
+
+  ### Read - GET
+
+  ### Update - PUT
+
+  ### Delete - DELETE
 
 ## Post
   ```javascript
@@ -19,9 +22,9 @@
   * Update = PUT
   * Delete = DELETE
 
-## Subject
+<!-- ## Subject
 
 ## Class
 
-## Grade
+## Grade -->
 

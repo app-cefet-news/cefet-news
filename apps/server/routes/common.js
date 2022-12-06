@@ -10,20 +10,23 @@ const prisma = new PrismaClient({
 
 const Router = express.Router()
 
-Router.post('/users', async (req, res) => { // CREATE USER
+// CREATE USER
+Router.post('/users', async (req, res) => { 
 
-  const { name, email, password } = req.body
+  const { name, email, username, password } = req.body
 
-  const users = await prisma.user.create({
+  const user = await prisma.user.create({
     data: {
       name: name,
       email: email,
+      username: username,
       password: password
     }
   })
 
-  res.status(200).json({ data: users })
+  res.status(200).json({ data: user })
 })
+
 
 Router.get('/', (req, res) => {
 
