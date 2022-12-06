@@ -1,26 +1,59 @@
-# App DCE CEFET/RJ
+# App DCE - CEFET/RJ
+
+## GitHub Repo
+
+```
+git@github.com:davirezendemota/dce-cefet-rj.git
+```
+
+## Figma
+
+```
+https://www.figma.com/team_invite/redeem/JcPdHqF8fA4SkcFJV0HRda
+```
 
 # Welcome!
 
 ### Some rules:
-* Be mobile first
-* English for coding
 
+- Be mobile first
+- English for coding
 
-# Techs Used
-Front-End
-* NextJs
-* ReactJs
-* TailwindCSS/PostCSS
-* Styled Components
+---
 
-Back-End
-* PlanetScale
-* Prisma
-* Vercel
+## Stacks Used
 
-Versioning
-* Git/GitHub (with gitflow)
+### Frontend
 
-## License 
-[MIT License](LICENSE)
+- NextJs
+- ReactJs
+- TailwindCss
+
+### Backend
+
+- NodeJS
+- ExpressJs
+- PlanetScale
+
+### Frontend Mobile
+
+- React Native
+
+### UX/UI
+
+- Figma
+
+### Server
+
+- Vercel
+
+### Versioning
+
+- Git/GitHub
+- Git Flow
+
+---
+
+## License
+
+[MIT License](notion://www.notion.so/davirezendemota/LICENSE)
